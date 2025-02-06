@@ -1,0 +1,66 @@
+.muli {
+  font-family: "muli", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+html {
+  overflow: hidden;
+  background-color: rgb(201, 255, 207);
+}
+
+header a{
+  text-decoration: none;
+  color: black;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+  header a:hover {
+    text-decoration: underline;
+  }
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 90px;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  width: 140vh;
+  background-color: white;
+  border: 2px solid;
+  border-radius: 50px;
+}
+
+div {
+  width: 100%;
+  padding: 70px;
+}
+
+.iframe {
+  width: 400px;
+  height: 442px;
+}
+  .iframe-width {
+    width: 600px;
+    height: 642px;
+  }
+  .iframe-height {
+    width: 400px;
+    height: 642px;
+  }
+  .iframe-game {
+    width: 600px;
+    height: 442px;
+  }
+
+img {
+  width: 20%;
+  margin: 50px;
+}

@@ -1,0 +1,48 @@
+.muli {
+  font-family: "muli", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+html {
+  overflow: hidden;
+  background-color: rgb(223, 159, 255);
+}
+
+header a{
+  text-decoration: none;
+  color: black;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+  header a:hover {
+    text-decoration: underline;
+  }
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 90px;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  width: 140vh;
+  background-color: white;
+  border: 2px solid;
+  border-radius: 50px;
+}
+
+div {
+  width: 30%;
+  padding-right: 10%;
+}
+
+img {
+  width: 30%;
+}

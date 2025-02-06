@@ -1,0 +1,174 @@
+.muli {
+  font-family: "muli", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+body {
+  /* display: fixed;
+  justify-content: center;
+  align-items: center; */
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  text-decoration: 3px underline;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(10, 171px);
+  grid-template-rows: repeat(7, 126px);
+  grid-template-areas: 
+  "a a a a1 b b b b b b"
+  "a a a a1 b b b b b b"
+  "a a a e e e e b1 b1 b1"
+  "a a a e e e e b1 b1 b1"
+  "d1 d1 d1 e e e e c1 c1 c1"
+  "d d d d d d c c c c"
+  "d d d d d d c c c c"
+  ;
+  font-size: 3rem;
+}
+
+.about {
+  grid-area: a;
+  border-bottom: 2px solid;
+  padding: 50px;
+  background-color: rgb(255, 207, 207);
+  transition: all 0.2s ease-in;
+}
+  .about1 {
+    grid-area: a1;
+    border-right: 2px solid;
+    background-color: rgb(255, 216, 216);
+    height: 120%;
+  }
+  .about:hover {
+    background-color: rgb(255, 121, 121);
+  }
+  .about:hover .about-fill {
+    background-color: rgb(255, 121, 121);
+  }
+  .about-fill {
+    position: absolute;
+    background-color: rgb(255, 207, 207);
+    width: 200px;
+    top: 0px;
+    left: 82px;
+    height: 300px;
+    margin-left: 400px;
+    transition: all 0.2s ease-in;
+  }
+
+.new {
+  background-color: rgb(223, 159, 255);
+  grid-area: b;
+  padding-left: 500px;
+  padding-top: 50px;
+  height: 120%;
+  transition: all 0.2s ease-in;
+}
+  .new1 {
+    background-color: rgb(223, 159, 255);
+    grid-area: b1;
+    border-bottom: 2px solid;
+  }
+  .new:hover {
+    background-color: rgb(203, 100, 255);
+  }
+  .new:hover .new-fill {
+    background-color: rgb(203, 100, 255);
+  }
+  .new-fill {
+    position: absolute;
+    background-color: rgb(223, 159, 255);
+    width: 600px;
+    height: 314px;
+    top: 188px;
+    right: 0;
+    margin-left: 400px;
+    transition: all 0.2s ease-in;
+  }
+
+.tmi {
+  background-color: rgb(201, 255, 207);
+  grid-area: c;
+  border-left: 2px solid;
+  height: 120%;
+  transition: all 0.2s ease-in;
+}
+  .tmi1 {
+    background-color: rgb(201, 255, 207);
+    grid-area: c1;
+    padding-left: 260px;
+    padding-top: 250px;
+  }
+  .tmi:hover {
+    background-color: rgb(77, 255, 98);
+  }
+  .tmi:hover .tmi-fill {
+    background-color: rgb(77, 255, 98);
+  }
+  .tmi-fill {
+    position: absolute;
+    background-color: rgb(201, 255, 207);
+    width: 653px;
+    height: 266px;
+    bottom: 112px;
+    right: 0px;
+    margin-left: 400px;
+    transition: all 0.2s ease-in;
+  }
+
+.old {
+  background-color: rgb(198, 244, 255);
+  grid-area: d;
+  padding-left: 50px;
+  padding-top: 180px;
+  height: 120%;
+  margin-top: -50px;
+  transition: all 0.2s ease-in;
+}
+  .old1 {
+    background-color: rgb(198, 244, 255);
+    grid-area: d1;
+  }
+  .old:hover {
+    background-color: rgb(81, 220, 255);
+  }
+  .old:hover .old-fill {
+    background-color: rgb(81, 220, 255);
+  }
+  .old-fill {
+    position: absolute;
+    background-color: rgb(198, 244, 255);
+    width: 600px;
+    height: 200px;
+    bottom: 178px;
+    left: -400px;
+    margin-left: 400px;
+    transition: all 0.2s ease-in;
+  }
+
+.center {
+  background-color: white;
+  grid-area: e;
+  border: 2px solid;
+  border-radius: 50px;
+  padding: 80px;
+  z-index: 999;
+}
+  .center p {
+    margin-top: 70px;
+    font-size: 1rem;
+  }
