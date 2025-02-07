@@ -10,21 +10,6 @@ body {
   padding: 0;
   overflow: hidden;
 }
-
-.cursor {
-  position: fixed;
-  border-radius: 50%;
-  transform: translateX(-50%) translateY(-50%);
-  background-color: white;
-  mix-blend-mode: difference;
-  height: 30px;
-  width: 30px;
-  z-index: 1000;
-  pointer-events: none;
-  transition: all 200ms ease-out;
-}
-
-
 a {
   cursor: pointer;
   text-decoration: none;
@@ -64,7 +49,6 @@ a:hover {
   }
 
 .new {
-  /* background-color: #df9fff; */
   grid-area: b;
   padding-left: 500px;
   padding-top: 100px;
@@ -72,33 +56,28 @@ a:hover {
   transition: all 0.2s ease-in;
 }
   .new1 {
-    /* background-color: rgb(223, 159, 255); */
     grid-area: b1;
     border-bottom: 2px solid;
   }
 
 .tmi {
-  /* background-color: #c9ffcf; */
   grid-area: c;
   border-left: 2px solid;
   transition: all 0.2s ease-in;
 }
   .tmi1 {
-    /* background-color: rgb(201, 255, 207); */
     grid-area: c1;
     padding-left: 250px;
     padding-top: 180px;
   }
 
 .old {
-  /* background-color: #c6f4ff; */
   grid-area: d;
   padding-left: 100px;
   padding-top: 50px;
   transition: all 0.2s ease-in;
 }
   .old1 {
-    /* background-color: rgb(198, 244, 255); */
     grid-area: d1;
   }
 
