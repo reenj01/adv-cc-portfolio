@@ -48,3 +48,17 @@ img {
   width: 50%;
   margin-top: 150px;
 }
+
+/* project 2 */
+.type h3 {
+  width: 80%;
+  height: 7%;
+}
+
+.type li {
+  list-style: none;
+  font-size: 2rem;
+  margin-left: 0;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
