@@ -39,7 +39,7 @@ function draw() {
   textFont('Arial');
   textSize(15);
   text("Inspired by the sudden popularity back to the early 2010s pixelated art, I created an experimental camera that explores the boundaries where both the extreme pixels of early technology and the constantly advancing technology merge together.", 700, 80, 600);
-  text("Use one hand to pinch.", 700, 80, 600);
+  text("Use one hand to pinch.", 700, 120, 600);
 
   incrementVal = slider.value();
 
