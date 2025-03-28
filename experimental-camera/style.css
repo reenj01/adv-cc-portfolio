@@ -1,0 +1,16 @@
+html, body {
+  padding: 0;
+  overflow: hidden;
+}
+
+body {
+  max-height: 90dvh;
+  max-width: 95dvw;
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid black;
+}
+
+canvas {
+  display: block;
+}

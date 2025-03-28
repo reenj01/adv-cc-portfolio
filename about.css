@@ -32,10 +32,10 @@ main {
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr;
   height: 80vh;
-  width: 70vw;
   background-color: white;
   border: 2px solid;
   border-radius: 50px;
+  margin-left: 100px;
 }
 
 div {
