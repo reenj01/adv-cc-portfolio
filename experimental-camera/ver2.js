@@ -39,7 +39,7 @@ function draw() {
   textFont('Arial');
   textSize(15);
   text("Inspired by the sudden popularity back to the early 2010s pixelated art, I created an experimental camera that explores the boundaries where both the extreme pixels of early technology and the constantly advancing technology merge together.", 700, 80, 600);
-  // For when life feels unsure and blurry; you have the power to uncover the hidden clarity with your own hands. Discover the hidden beauty in details. With just a simple pinch interaction, discover what's behind the sensored.
+  text("Use one hand to pinch.", 700, 80, 600);
 
   incrementVal = slider.value();
 
