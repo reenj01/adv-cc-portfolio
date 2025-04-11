@@ -1,0 +1,49 @@
+:root {
+  --brown: rgb(70, 10, 9);
+}
+
+html {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+body {
+  background-color: rgb(237, 225, 218);
+  display: flex;
+  height: 100dvh;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  width: 80%;
+  height: 80%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  color: var(--brown);
+}
+  .left-section, .right-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .left-section {
+    border-right: 2px solid var(--brown);
+  }
+
+  .right-section h1 {
+    margin-bottom: 70px;
+  }
+
+  .right-section button {
+    background-color: transparent;
+    border: 1px solid var(--brown);
+    color: var(--brown);
+    border-radius: 2px;
+    padding: 20px;
+    margin: 20px;
+  }
