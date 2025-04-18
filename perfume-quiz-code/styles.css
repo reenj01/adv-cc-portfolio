@@ -1,5 +1,11 @@
 :root {
-  --brown: rgb(70, 10, 9);
+  --brown: #460a09;
+}
+
+.amandine {
+  font-family: "amandine", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 html {
@@ -10,12 +16,15 @@ html {
 }
 
 body {
-  background-color: rgb(237, 225, 218);
+  background-color: #ede1da;
   display: flex;
   height: 100dvh;
   align-items: center;
   justify-content: center;
 }
+  button {
+    cursor: pointer;
+  }
 
 main {
   width: 80%;
@@ -29,6 +38,7 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
   }
 
   .left-section {
@@ -37,6 +47,10 @@ main {
 
   .right-section h1 {
     margin-bottom: 70px;
+    font-family: "amandine", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    width: 70%;
   }
 
   .right-section button {
@@ -46,4 +60,28 @@ main {
     border-radius: 2px;
     padding: 20px;
     margin: 20px;
+    font-family: "lexia-variable", sans-serif;
+    font-variation-settings: "wght" 400;
+  }
+
+  .note-row, .row, #perfume2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-family: "lexia-variable", sans-serif;
+    font-variation-settings: "wght" 300;
+    width: 60%;
+  }
+
+  .restart-btn {
+    margin-top: 10%;
+  }
+
+  #perfume2 {
+    justify-content: end;
+  }
+
+  img {
+    width: 65%;
   }
