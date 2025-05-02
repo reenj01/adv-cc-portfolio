@@ -1,59 +1,33 @@
-let button
-let dessertName = ""
+async function getRandomDessert() {
+  const output = document.getElementById('dessert-output');
+  output.innerHTML = 'Loading...';
 
-function setup() {
-  createCanvas(windowWidth, windowHeight);
-  button = createButton('click me!');
-  button.position(0, 100);
-  button.mousePressed(makeAJoke);
-}
+  try {
+    // Step 1: Fetch all dessert meals
+    const listResponse = await fetch('https://www.themealdb.com/api/json/v1/1/filter.php?c=Dessert');
+    const listData = await listResponse.json();
 
-function draw() {
-  background(255);
-  textSize(30)
-  text(dessertName, 20, 200)
-}
+    // Step 2: Pick a random meal
+    const meals = listData.meals;
+    const randomMeal = meals[Math.floor(Math.random() * meals.length)];
 
-async function makeAJoke(){
-  try{
-    console.log("hello")
-    let response = await fetch("https://www.themealdb.com/api/json/v1/1/filter.php?c=Dessert", 
-    //1. we make an API request and store the response
-    {headers: {"Accept":"application/json"}}
-    //2. we specify we need the response as JSON (optional)
-    )
+    // Step 3: Fetch full meal details
+    const detailsResponse = await fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${randomMeal.idMeal}`);
+    const detailsData = await detailsResponse.json();
+    const meal = detailsData.meals[0];
 
-    let content = await response.json()
-    //3. we get the actual body we need from the response 
-  
-    dessertName = content.strMeal
-    //4. we get the joke
-  }
-  
-  catch(error){
-    console.log(error)
-    dessertName = "Sorry, system down, no jokes today"
-  } 
-}
-
-
-async function makeHipsterJoke(){
-  try{
-    console.log('entered hipster joke function')
-    let response = await fetch("https://www.themealdb.com/api/json/v1/1/filter.php?c=Dessert",
-      {headers: {"Accept":"application/json"}}
-    )
-    console.log(response)
-
-    let content = await response.json()
-    console.log(content.results[0].joke)
-
-    dessertName = content.results[0].joke
-
-  }
-  catch(error){
-    console.log(error)
-    dessertName = "Sorry, system down, no jokes today"
-
+    // Step 4: Display meal info
+    output.innerHTML = `
+      <h2>${meal.strMeal}</h2>
+      <img src="${meal.strMealThumb}" alt="${meal.strMeal}">
+      <p><strong>Instructions:</strong> ${meal.strInstructions.slice(0, 300)}...</p>
+    `;
+  } catch (error) {
+    output.innerHTML = 'Failed to load dessert.';
+    console.error(error);
   }
 }
+
+window.onload = function() {
+  getRandomDessert();
+};
