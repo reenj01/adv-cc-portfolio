@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>A Sweet Treat for You</title>
+  <style>
+    body { font-family: sans-serif; text-align: center; margin-top: 50px; }
+    img { width: 300px; border-radius: 10px; margin-top: 20px; }
+
+    .select {
+      display: flex;
+      flex-direction: row;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="select">
+    <p>I want to bake snacks for </p>
+    <select>
+      <option>my graduation party</option>
+      <option>finishing my final project celebration</option>
+      <option>getting through this school year</option>
+    </select>
+  </div>
+
+  <button onclick="getRandomDessert()">A Sweet Treat for Me!</button>
+  
+  <div id="dessert-output"></div>
+
+  <script>
+    async function getRandomDessert() {
+      const output = document.getElementById('dessert-output');
+      output.innerHTML = 'Loading...';
+
+      try {
+        // Step 1: Fetch all dessert meals
+        const listResponse = await fetch('https://www.themealdb.com/api/json/v1/1/filter.php?c=Dessert');
+        const listData = await listResponse.json();
+
+        // Step 2: Pick a random meal
+        const meals = listData.meals;
+        const randomMeal = meals[Math.floor(Math.random() * meals.length)];
+
+        // Step 3: Fetch full meal details
+        const detailsResponse = await fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${randomMeal.idMeal}`);
+        const detailsData = await detailsResponse.json();
+        const meal = detailsData.meals[0];
+
+        // Step 4: Display meal info
+        output.innerHTML = `
+          <h2>${meal.strMeal}</h2>
+          <img src="${meal.strMealThumb}" alt="${meal.strMeal}">
+          <p><strong>Instructions:</strong> ${meal.strInstructions.slice(0, 300)}...</p>
+        `;
+      } catch (error) {
+        output.innerHTML = 'Failed to load dessert.';
+        console.error(error);
+      }
+    }
+  </script>
+
+</body>
+</html>
