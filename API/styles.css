@@ -1,0 +1,200 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+:root {
+  --brown: rgb(71, 23, 10);
+  --red: rgb(199, 8, 8);
+}
+
+body {
+  width: 100dvw;
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* background-color: #f0d9cd; */
+  color: var(--brown);
+  /* background-image: url('bg.png'); */
+  background: linear-gradient(300deg,#f0d9cd,#febbbd,#fee3bb);
+  background-size: 180% 180%;
+  animation: gradient-animation 15s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: var(--brown);
+}
+
+button {
+  background: transparent;
+  border: none;
+  font-family: "embury-text", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: rgb(199, 8, 8);
+  font-size: 20px;
+  cursor: pointer;
+}
+
+h1 {
+  font-family: "gastromond", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 50px;
+}
+
+.desc {
+  text-align: center;
+  width: 730px;
+  margin-bottom: 50px;
+  font-size: 20px;
+}
+
+h2 {
+  font-family: "embury-text", serif;
+  font-weight: 400;
+  font-style: normal;
+  margin-bottom: 40px;
+  font-size: 18px;
+}
+
+.container {
+  width: 650px;
+  background-color: white;
+  padding: 30px;
+  padding-bottom: 60px;
+  border-radius: 20px;
+  box-shadow: rgba(77, 33, 10, 0.245) 0px 5px 24px;
+  font-family: "embury-text", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.icon {
+  width: 15%;
+}
+
+.drag-area {
+  height: 300px;
+  border: 2px dashed rgb(202, 202, 202);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+  .drag-area.active {
+    border: 2px solid rgb(10, 124, 255);
+  }
+
+.drag-area .header {
+  font-size: 19px;
+}
+
+.drag-area .support {
+  color: grey;
+  margin: 20px;
+  font-size: 13px;
+}
+
+.drag-area .button {
+  color: rgb(10, 124, 255);
+  cursor: pointer;
+}
+
+.drag-area .upload-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.next-btn {
+  display: none;
+}
+
+.puzzle-div {
+  background-color: white;
+  width: 600px;
+  height: 500px;
+}
+
+.form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-family: "embury-text", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+  .form input {
+    margin-left: 50px;
+  }
+
+  .submit-btn {
+    background: transparent;
+    border: none;
+    font-family: "embury-text", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: rgb(199, 8, 8);
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  .canvas-container {
+    position: relative;
+  }
+
+  #canvas {
+    background-color: #fff;
+    border: 2px solid #ccc;
+    cursor: crosshair;
+  }
+
+  .controls {
+    margin-top: 10px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+    .controls input {
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+
+  .color-picker {
+    margin-left: 10px;
+  }
+
+  .clear-btn {
+    background-color: white;
+    border: 1px solid var(--brown);
+    color: var(--brown);
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 15px;
+    font-family: "embury-text", serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-left: 20px;
+      margin-right: 20px;
+  }

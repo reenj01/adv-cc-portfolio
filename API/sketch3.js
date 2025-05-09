@@ -30,4 +30,8 @@ async function getRandomDessert() {
 
 window.onload = function() {
   getRandomDessert();
+  setTimeout(() => {
+    let btn = document.querySelector('.restart-btn');
+    btn.style.display = "block";
+  }, 3000);
 };
